@@ -1,0 +1,47 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 2rem;
+}
+
+.flex-padre {
+    width: 100%;
+    background-color: hotpink;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*flex-flow: row wrap;*/
+    align-items: flex-end;
+}
+
+.flexhijo {
+    width: 100px;
+    height: 100px;
+}
+
+.uno {
+    background-color: aquamarine;
+    height: 80px;
+}
+
+.dos {
+    background-color: beige;
+    height: 50px;
+}
+
+.tres {
+    background-color: darkblue;
+}
+
+.cuatro {
+    background-color: grey;
+    height: 20px;
+}
