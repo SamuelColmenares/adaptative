@@ -8,6 +8,8 @@ html {
 
 main {
     margin: 2rem;
+    /*min-width: 500px;
+    max-width: 800px;*/
 }
 
 .flex-padre {
@@ -15,33 +17,74 @@ main {
     background-color: hotpink;
     padding: 1rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     /*flex-flow: row wrap;*/
     align-items: flex-end;
 }
 
 .flexhijo {
-    width: 100px;
     height: 100px;
+    flex-grow: 4;
 }
 
 .uno {
     background-color: aquamarine;
     height: 80px;
+    order: 3;
 }
 
 .dos {
     background-color: beige;
     height: 50px;
+    order: 4;
 }
 
 .tres {
     background-color: darkblue;
+    order: 1;
 }
 
 .cuatro {
     background-color: grey;
     height: 20px;
+    order: -1;
+}
+
+
+/*@media tv and (min-width: 600px) and (orientation: landscape) {*/
+
+@media (min-width: 600px) {
+    .flex-padre {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 12px;
+    }
+    .uno {
+        background-color: aquamarine;
+        height: 80px;
+        order: 3;
+        flex-grow: 2;
+        align-self: flex-start;
+    }
+    .dos {
+        background-color: beige;
+        height: 50px;
+        order: 4;
+        flex-shrink: 2;
+    }
+    .tres {
+        background-color: darkblue;
+        order: 1;
+        flex-grow: 1;
+    }
+    .cuatro {
+        background-color: grey;
+        height: 20px;
+        order: -1;
+        flex-grow: 1;
+    }
 }
